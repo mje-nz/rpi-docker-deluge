@@ -1,4 +1,6 @@
 # Deluge Docker container for Raspberry Pi
+[![](https://images.microbadger.com/badges/image/mjenz/rpi-deluge.svg)](https://microbadger.com/images/mjenz/rpi-deluge "Get your own image badge on microbadger.com")
+
 Deluge 1.3.15-r1 on Alpine 3.7, based on [eana/alpine-deluge](https://github.com/eana/alpine-deluge).
 
 This container is intended to be to used to seed torrents from a Raspberry Pi, with all the files stored on a single external drive.
