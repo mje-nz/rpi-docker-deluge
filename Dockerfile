@@ -14,4 +14,6 @@ ADD config /default-config
 ADD startdeluge /usr/local/bin/startdeluge
 RUN chmod 755 /usr/local/bin/startdeluge
 
+USER 1000:1000
+
 CMD ["/usr/local/bin/startdeluge"]
