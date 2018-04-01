@@ -10,6 +10,9 @@ RUN set -xe && \
     pip install --upgrade setuptools && \
     pip2 install incremental constantly packaging automat service_identity
 
+ENV PYTHON_EGG_CACHE /tmp/.cache
+RUN mkdir -p $PYTHON_EGG_CACHE && chown -R 1000:1000 $PYTHON_EGG_CACHE
+
 ADD config /default-config
 ADD startdeluge /usr/local/bin/startdeluge
 RUN chmod 755 /usr/local/bin/startdeluge

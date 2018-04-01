@@ -9,10 +9,11 @@ This container is intended to be to used to seed torrents from a Raspberry Pi, w
 ## Installation
 To install as a service:
 ```
-docker run --detach --volume /media/seedbox:/deluge --net=host --restart=unless-stopped --name=deluge mjenz/rpi-deluge
+docker run --detach --volume /media/seedbox:/deluge --volume /etc/localtime:/etc/localtime:ro --net=host --restart=unless-stopped --name=deluge mjenz/rpi-deluge
 ```
 
 If you don't need UPnP, you can lock it down a bit more by replacing `--net=host` with `-p 8112:8112 -p 21021-21060:21021-21060` (plus `-p 58846:58846` if you're using a thin client).
+If you don't need the scheduler, you can remove the `/etc/localtime` bind mount.
 
 
 ## Usage
