@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+#if ! [ -d /deluge/torrents/.state ];then
+#  mkdir -p /deluge/torrents/.state;
+#fi
+
+if ! [ -d /deluge/config ]; then
+  cp -r /default-config /deluge/config
+fi
+
+/usr/bin/deluged -L info -c /deluge/config
+exec /usr/bin/deluge-web -L info -c /deluge/config
