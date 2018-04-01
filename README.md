@@ -23,6 +23,11 @@ The web UI is available on port 8112.
 The default password is `deluge` (you should change it).
 
 ### Thin client
+You can use the Deluge GUI as a thin client.
+First, go to Preferences -> Interface and disable classic mode.
+Then, you can use the Connection Manager to add a connection to this server.
+To set up credentials for the remote connection, run `echo "username:pasword:10" >> /media/seedbox/config/auth` (replacing `username` and `password` with the credentials you'd like to log in with).
+If you check "Automatically connect to selected host on start-up" and "Do not show this dialog on start-up" then the experience is basically seamless, give or take a bit of network lag.
 
 ### Filesystem
 The default configuration uses the following folders on the volume:
